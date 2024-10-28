@@ -1,0 +1,19 @@
+1. Pemisahan Kelas Movie ke File Terpisah:
+- Sebelum: Movie adalah bagian dari kelas MovieAppBefore.
+- Sesudah: Kelas Movie dipisahkan dari logika tampilan dan ditempatkan di file sendiri. Ini meningkatkan modularitas dan memungkinkan perubahan pada Movie tanpa mempengaruhi aplikasi utama.
+
+2. Penambahan Kelas MovieManager:
+- Sebelum: Logika manipulasi film (add, remove, mark as watched) terdapat dalam main program.
+- Sesudah: Logika ini dipisahkan ke dalam kelas MovieManager, yang bertanggung jawab penuh atas manajemen daftar film. Ini memudahkan untuk mengelola perubahan logika film secara terpisah dari tampilan.
+
+3. Pemisahan Antara Logika Tampilan dan Logika Bisnis:
+- Sebelum: Tampilan dan logika bisnis tercampur dalam satu loop di main.
+- Sesudah: Kelas MovieAppAfter sekarang hanya menangani tampilan dan input/output pengguna, sedangkan logika bisnis ditempatkan di MovieManager.
+
+4. Refactor Switch Statement:
+- Sebelum: Semua pilihan dalam switch statement berada langsung di dalam loop.
+- Sesudah: Setiap pilihan dipecah menjadi metode tersendiri, misalnya addMovie(), removeMovie(), dan markMovieAsWatched() untuk memisahkan logika dan meningkatkan keterbacaan.
+
+5. Perbaikan Metode dan Properti:
+- Sebelum: Properti title dan watched diakses langsung.
+- Sesudah: Properti title dan watched diakses melalui getter untuk meningkatkan enkapsulasi.
